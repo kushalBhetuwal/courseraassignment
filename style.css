@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height:200vh;
+    background-color: #130f40;
+   background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+
+}
+
+/** textshadow effect------------- **/
+
+.spacer{
+    margin-left:40px;
+}
+.littlelemon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top:300px;
+    left:200px;
+    gap:40px;
+    position:absolute;
+    z-index: 100;
+}
+.imagelogo{
+    animation:rounding .8s linear;
+    animation-direction: alternate;
+}
+.imagelogo:hover{
+    animation:rounding .8s linear infinite;
+}
+@keyframes rounding{
+   
+     25%{
+        transform:scale(1.4,1.4);
+    }
+}
+
+.container span{
+ font-size: 5rem;
+ text-transform: uppercase;
+ animation: animate 2s linear infinite;
+ animation-delay: calc(200ms * var(--i));
+ padding:20px;
+ z-index:300;
+}
+
+
+@keyframes animate {
+    0%,
+    100% {
+      color: #fff;
+      filter: blur(1px);
+      text-shadow: 0 0 10px #00c2ba, 0 0 20px #00c2ba, 0 0 30px #00c2ba,
+        0 0 40px #00c2ba, 0 0 60px #00c2ba, 0 0 80px #00c2ba, 0 0 100px #00c2ba,
+        0 0 120px #00c2ba;
+    }
+  
+    5%,
+    95% {
+      filter: blur(0);
+      text-shadow:none;
+    }
+  }
+
+  /** text shadow effect --------------**/
+
+/*navbar --------*/
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    top:0;
+    left:0;
+    position:fixed;
+    width:100%;
+}
+.navbar ul{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:50px;
+    position: relative;
+    transition: 0.7s;
+}
+
+ul li{
+list-style-type: none;
+position: relative;
+transition: 0.7s;
+}
+
+li a{
+    transition: 0.7s;
+    position: relative;
+    text-decoration: none;
+    font-size:2.7rem;
+    color:#fff;
+    letter-spacing: 2px;
+}
+
+.banner{
+    background:url(/images/sydney4.jpg);
+    position:relative;
+    height:100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+}
+
+.sticky{
+    z-index:200;
+    background:#fff;
+    padding:5px 140px;
+    transition: 1s;
+}
+
+.sticky li a{
+    color:#000;
+    letter-spacing: 3px;
+}
+
+/*-------------*/
